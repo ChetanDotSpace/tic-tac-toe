@@ -1,0 +1,81 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Press+Start+2P&display=swap');
+
+
+body {
+  background-color: var(--yellow);
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --pink: #ff58a6;
+  --btn: #60caff;
+  --blur: #161616;
+  --green: #2a2a2a;
+  --yellow: #1d1d1d;
+}
+.msg-container { 
+  display: flex;
+  font-size: 36px;
+  color: aliceblue;
+  font-family: 'Press Start 2P',sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.header {
+  color: #FFD700;
+  font-family: 'Fairplay Display', sans-serif;
+  font-size: 5vmin;
+  text-align: center;
+}
+.game {
+  padding-top: 10vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 8vmax 8vmax 8vmax;
+  grid-template-rows: 8vmax 8vmax 8vmax;
+  row-gap: 10px;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+.box {
+  
+  font-size: 5vmax;
+  height: 8vmax;
+  width: 8vmax;
+  border: none;
+  color: #FFD700;
+  border: 1px solid rgb(166, 166, 166);
+  background-color: var(--yellow);
+  box-shadow: 10px 10px 10px -1px var(--blur), -10px -10px 10px -1px var(--green);
+  border-radius: 15px;
+}
+.controls {
+  margin: 3vmax 0 3vmax 0;
+  text-align: center;
+}
+.btn {
+  font-family: 'Playfair Display',sans-serif,'Courier New', Courier, monospace;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 15px;
+  color: rgb(203, 203, 203);
+  background-color: var(--yellow);
+  
+  box-shadow: 10px 10px 10px -1px var(--blur), -10px -10px 10px -1px var(--green);
+  border: 1px solid rgb(166, 166, 166);
+  border-radius: 8px;
+  padding: 15px;
+
+  border: none;
+}
+footer {
+  text-align: center;
+}
+.hide{
+  display: none;
+}
