@@ -18,10 +18,12 @@ body {
   display: flex;
   font-size: 36px;
   color: aliceblue;
+  padding: 20px;
   font-family: 'Press Start 2P',sans-serif;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 95vh;
 }
 
@@ -32,7 +34,7 @@ body {
   text-align: center;
 }
 .game {
-  padding-top: 10vh;
+  padding-top: 8vh;
   margin: auto;
   display: grid;
   grid-template-columns: 8vmax 8vmax 8vmax;
@@ -55,7 +57,7 @@ body {
   border-radius: 15px;
 }
 .controls {
-  margin: 3vmax 0 3vmax 0;
+  margin-top: 5vh;
   text-align: center;
 }
 .btn {
@@ -65,16 +67,39 @@ body {
   font-size: 15px;
   color: rgb(203, 203, 203);
   background-color: var(--yellow);
-  
-  box-shadow: 10px 10px 10px -1px var(--blur), -10px -10px 10px -1px var(--green);
-  border: 1px solid rgb(166, 166, 166);
+  box-shadow: 5px 5px 10px -1px var(--blur), -5px -5px 10px -1px var(--green);
   border-radius: 8px;
   padding: 15px;
-
   border: none;
+}
+.brand-icon{
+  height: 40px;
+  fill: red;
+  cursor: pointer;
+  background-color: #ffffff;
+  padding: 5px;
+  color: rgb(203, 203, 203);
+  box-shadow: 5px 5px 10px -1px black, -5px -5px 10px -1px #626262;
+  border-radius: 15%;
+  margin: 0 5px 0 5px;
+}
+.author{
+  color: #ffffff;
+  padding-top: 10px;
+
 }
 footer {
   text-align: center;
+
+}
+footer a{
+  background-color: #fff;
+  
+}
+
+#svg{
+  height: 50px;
+  
 }
 .hide{
   display: none;
