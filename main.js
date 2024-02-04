@@ -1,5 +1,6 @@
 let boxes = document.querySelectorAll(".box");
-// let winnerMsg = document.getElementsByClassName(".msgConatianer");
+let githubLink = document.querySelector("#github-link");
+let linkedinLink = document.querySelector("#linkedin-link");
 let resetBtn = document.querySelector("#resetGame");
 let newGame = document.querySelector("#newGame");
 let msgConatianer = document.querySelector(".msg-container");
@@ -7,9 +8,12 @@ let msg = document.querySelector("#msg");
 let winAudio = new Audio('winningBell.wav');
 let startAudio = new Audio('startBell.wav');
 
-
-
-
+githubLink.addEventListener("click", ()=>{
+    window.open("https://github.com/chetandotspace")
+})
+linkedinLink.addEventListener("click", ()=>{
+    window.open("https://linkedin.com/in/chetandotspace")
+})
 
 let winPatterns= [
     [0, 1, 2],
@@ -25,11 +29,11 @@ let turn0=true;
 boxes.forEach((box)=>{
     box.addEventListener('click',()=>{
         if(turn0){
-            box.innerText="X";
+            box.innerText="O";
             turn0=false;
 
         }else{
-            box.innerText="O"
+            box.innerText="X "
             turn0=true;
         }
         box.disabled=true;
@@ -41,7 +45,7 @@ boxes.forEach((box)=>{
 const reset = ()=>{
     
     turn0=true;
-    startAudio.volume=0.1;
+    // startAudio.volume=0.2;
     startAudio.play();
 
     for(let box of boxes){
@@ -61,7 +65,7 @@ const disableBtn=()=>{
     }
 }
 const showWinner=(winner)=>{
-    msg.innerText =`Winner is ${winner}`;
+    msg.innerText =`'${winner}' is the winner`;
     msgConatianer.classList.remove("hide");
 
 
@@ -80,7 +84,23 @@ const checkWinner= ()=>{
                 winAudio.play();
                 
             }
+        
         };
+        
 
     };
+    let count=0;
+    for( let box of boxes){
+
+        if (box.innerText=="O"||box.innerText=="X"){
+            count++;
+
+        }
+    }
+    if(count==9){
+        msg.innerText=`The Game is Draw`
+        msgConatianer.classList.remove("hide");
+        winAudio.play();
+
+    }
 }
